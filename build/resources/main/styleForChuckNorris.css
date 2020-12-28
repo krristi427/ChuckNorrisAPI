@@ -1,0 +1,19 @@
+.root {
+    -fx-background-color: #282828;
+}
+
+#categoriesButton, #randomJokeButton, #queryBasedJokeButton,
+#theIDofRandomJoke, #theRandomJoke,
+#queryField {
+    -fx-background-color: #585858;
+    -fx-border-radius: 100%;
+}
+
+#categoriesButton:hover, #randomJokeButton:hover, #queryBasedJokeButton:hover {
+    -fx-background-color: #54a9ff;
+    -fx-text-fill: #585858;
+}
+
+#queryField {
+    -fx-text-fill: #54a9ff;
+}

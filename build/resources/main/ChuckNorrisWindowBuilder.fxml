@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="TOP_CENTER" prefHeight="419.0" prefWidth="375.0" spacing="15.0" stylesheets="@styleForChuckNorris.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ChuckNorris.ChuckNorrisController">
+   <children>
+      <Label alignment="TOP_CENTER" text="ChuckNorris" textFill="#0011d6" underline="true" wrapText="true">
+         <VBox.margin>
+            <Insets top="25.0" />
+         </VBox.margin>
+      </Label>
+      <Label fx:id="theIDofRandomJoke" prefHeight="17.0" prefWidth="161.0" textAlignment="CENTER" textFill="#54a9ff" wrapText="true" />
+      <Label fx:id="theRandomJoke" prefHeight="113.0" prefWidth="328.0" textAlignment="CENTER" textFill="#54a9ff" wrapText="true" />
+      <Button fx:id="randomJokeButton" mnemonicParsing="false" onAction="#getRandomJoke" text="Just show me the joke" textAlignment="CENTER" textFill="#54a9ff" wrapText="true" />
+      <MenuButton fx:id="categoriesButton" mnemonicParsing="false" text="all categories" textAlignment="CENTER" textFill="#54a9ff">
+         <VBox.margin>
+            <Insets top="10.0" />
+         </VBox.margin>
+         <items>
+            <MenuItem mnemonicParsing="false" onAction="#getJokeOnCategory" text="animal" />
+            <MenuItem mnemonicParsing="false" onAction="#getJokeOnCategory" text="career" />
+            <MenuItem mnemonicParsing="false" onAction="#getJokeOnCategory" text="celebrity" />
+            <MenuItem mnemonicParsing="false" onAction="#getJokeOnCategory" text="dev" />
+            <MenuItem mnemonicParsing="false" onAction="#getJokeOnCategory" text="explicit" />
+            <MenuItem mnemonicParsing="false" onAction="#getJokeOnCategory" text="fashion" />
+            <MenuItem mnemonicParsing="false" onAction="#getJokeOnCategory" text="food" />
+            <MenuItem mnemonicParsing="false" onAction="#getJokeOnCategory" text="history" />
+            <MenuItem mnemonicParsing="false" onAction="#getJokeOnCategory" text="money" />
+            <MenuItem mnemonicParsing="false" onAction="#getJokeOnCategory" text="movie" />
+            <MenuItem mnemonicParsing="false" onAction="#getJokeOnCategory" text="music" />
+            <MenuItem mnemonicParsing="false" onAction="#getJokeOnCategory" text="political" />
+            <MenuItem mnemonicParsing="false" onAction="#getJokeOnCategory" text="religion" />
+            <MenuItem mnemonicParsing="false" onAction="#getJokeOnCategory" text="science" />
+            <MenuItem mnemonicParsing="false" onAction="#getJokeOnCategory" text="sport" />
+            <MenuItem mnemonicParsing="false" onAction="#getJokeOnCategory" text="travel" />
+         </items>
+      </MenuButton>
+      <HBox alignment="CENTER" prefHeight="77.0" prefWidth="375.0">
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+         <children>
+            <TextField fx:id="queryField" onKeyPressed="#pressedKeyForQuery">
+               <HBox.margin>
+                  <Insets right="10.0" />
+               </HBox.margin>
+            </TextField>
+            <Button fx:id="queryBasedJokeButton" mnemonicParsing="false" onAction="#getJokeOnQuery" text="Random Joke on that word" textAlignment="CENTER" textFill="#54a9ff">
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
+   </children>
+   <opaqueInsets>
+      <Insets />
+   </opaqueInsets>
+</VBox>
